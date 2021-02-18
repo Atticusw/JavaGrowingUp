@@ -1,12 +1,18 @@
 package com.atticusw.eeaew.generics;
 
+import com.atticusw.eeaew.generics.define.MyGenericClass;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class UseGenericClassAppMain {
+
+
     public static void main(String[] args) {
 //        useStringList();
         useStringListGenerics();
+        MyGenericClass<String, String> genericClass = new MyGenericClass<>("String", "String");
+        Object test = genericClass.test("str","str");
     }
 
     private static List createStringList() {

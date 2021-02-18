@@ -12,6 +12,11 @@ public class MyGenericClass<First, Second> {
         this.first = first;
         this.second = second;
     }
+    // 尖括号里面的就是泛型声明，表示这个方法，或者这个类中可以使用的
+    public <T> T test(String str, T t) {
+        t = (T) new Object();
+        return t;
+    }
 
     public First getFirst() {
         return first;
